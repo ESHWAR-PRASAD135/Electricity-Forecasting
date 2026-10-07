@@ -10,9 +10,7 @@ st.set_page_config(page_title="Electricity Consumption Forecasting",
 st.title("⚡ Electricity Consumption Forecasting")
 st.caption("Deep Learning Case Study using LSTM")
 
-required = ["electricity_lstm.keras",
-            scaler.pkl", recent_sequence.npy"]
-
+required = ["electricity_lstm.keras", "scaler.pkl", "recent_sequence.npy"]
 if not all(os.path.exists(x) for x in required):
     st.error("Model files are missing. Run `python train_model.py` first.")
     st.stop()
